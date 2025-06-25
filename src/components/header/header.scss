@@ -1,0 +1,13 @@
+header {
+  border: 0.2em solid red;
+  //   background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  align-items: center;
+}
