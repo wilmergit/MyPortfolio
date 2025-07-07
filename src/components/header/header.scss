@@ -1,17 +1,27 @@
 @import "../../variables.scss";
 
 .hdr {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(2px);
+  width: 400px;
+  height: 50px;
+  border-radius: 100px;
+  margin-top: 10px;
+  position: fixed;
+  border: 1px solid rgba(175, 172, 172, 0.302);
+  box-shadow: inset 0px 0px 8px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  font-family: $font-family-secondary;
-  // background: red;
-  color: $second-page-color;
-  width: max-content;
-  height: min-content;
-  //Se esconde hacia arriba cuando scrolleas
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  
 }
 
-.hdr h1{
-  padding: 0;
-  margin: 10px;
+.hdr a {
+  text-decoration: none;
+  color: $second-page-color;
+  font-weight: bold;
 }

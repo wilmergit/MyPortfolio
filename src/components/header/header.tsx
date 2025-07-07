@@ -3,7 +3,9 @@ import "./header.scss";
 export default function Header() {
   return (
     <header className="hdr">
-      <h1>(Wilmer Zeas Rodriguez)</h1>
+      <a className="refs" href="">Experiencia</a>
+      <a className="refs" href="">Sobre mí</a>
+      <a className="refs" href="">Proyectos</a>
     </header>
   );
 }

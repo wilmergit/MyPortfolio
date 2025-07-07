@@ -1,6 +1,5 @@
 import Header from "./components/header/header";
 import Intro from "./components/intro/intro";
-import Menu from "./components/menu/menu";
 import "./global.scss";
 
 export default function App() {
@@ -9,7 +8,6 @@ export default function App() {
       <div className="content">
         <Header />
         <Intro />
-        <Menu/>
       </div>
     </div>
   );

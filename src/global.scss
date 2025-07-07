@@ -2,6 +2,7 @@
 :root {
   // padding: $app-padding;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -27,11 +28,10 @@ body {
   width: auto;
   height: 100vh;
   background-image: linear-gradient(
-    to top ,
+    to top,
     $gradient-first-color,
     $gradient-second-color,
     $gradient-third-color,
-    $gradient-fourth-color
   );
 }
 
@@ -42,5 +42,5 @@ body {
   flex-direction: column;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.5);
-  padding: 0 1em 0 1em;
+  padding: 0 5em 0 5em;
 }
