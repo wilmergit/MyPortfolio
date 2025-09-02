@@ -1,4 +1,4 @@
-@import "variables";
+@use "variables.scss" as var;
 :root {
   // padding: $app-padding;
   margin: 0;
@@ -6,11 +6,11 @@
 }
 
 h1 {
-  font-size: $font-size-xl;
+  font-size: var.$font-size-xl;
 }
 
 h2 {
-  font-size: $font-size-lg;
+  font-size: var.$font-size-lg;
 }
 
 p {
@@ -29,9 +29,9 @@ body {
   height: 100vh;
   background-image: linear-gradient(
     to top,
-    $gradient-first-color,
-    $gradient-second-color,
-    $gradient-third-color,
+    var.$gradient-first-color,
+    var.$gradient-second-color,
+    var.$gradient-third-color
   );
 }
 
