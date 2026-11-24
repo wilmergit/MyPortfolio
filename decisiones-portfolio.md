@@ -146,6 +146,20 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - El código y las alternativas se conservan en prueba-hallmark. La portada principal sigue siendo la versión actual; la elección de una alternativa continúa pendiente.
 - Esta publicación usa el dominio existente de GitHub Pages y sustituye su contenido por la versión de prueba. No requiere tener el servidor local encendido.
 
+
+## Rediseños completos a partir de las referencias — 24 de noviembre de 2026
+
+- **Corrección del alcance.** Wilmer aclara que busca propuestas con cambios profundos de color, tipografía y distribución, conservando la esencia futurista. La paleta inicial deja de ser una restricción para las alternativas; la portada original sigue disponible.
+- **Referencias recibidas.** Ahora están disponibles las cuatro imágenes originales: boceto con nombre rojo y credencial Casamedia; mosaico Dsgners con marco grueso y paneles asimétricos; credencial y fotografía de producto; carteles gráficos de alto contraste. Se usan como dirección visual, sin publicar esas imágenes de referencia ni copiar métricas, retratos o testimonios.
+- **Módulo, `#/disenos/modulo`.** Mosaico de marco oscuro y paneles claros, menta, lila y naranja. Syne para los titulares. Heaven ocupa el centro; la presentación, la experiencia y el contacto forman módulos independientes. En móvil Heaven se coloca primero tras la identidad.
+- **Órbita, `#/disenos/orbita`.** Portada grafito con plata y naranja. Space Grotesk para titulares y cartucho de Heaven a gran escala, seguido de registros de experiencia y bloques de presentación y contacto. La composición del hero y la distribución del contenido son independientes de la portada inicial.
+- **Signal, `#/disenos/signal`.** Fondo rojo, tinta oscura de mayor contraste, tipografía condensada Anton y composición de cartel. Se muestra la captura completa de Heaven y Casamedia adopta el formato de credencial. El bloque de presentación y el cierre siguen el lenguaje de cartel.
+- **Implementación.** FutureConcept.tsx contiene las tres composiciones nuevas. El objeto Project de Heaven sigue alimentando la imagen, nombre, resumen, tecnologías, autoría y enlace a su ficha. Colores y fuentes de las propuestas se declaran como tokens. Las nuevas familias se alojan localmente con sus licencias OFL.
+- **Comparación y conservación.** La galería principal ofrece Actual, Módulo, Órbita y Signal, con capturas reales de escritorio/móvil. Editorial, Técnica y Producto siguen disponibles en «Ver las primeras variaciones» y conservan sus rutas. No se ha elegido un diseño definitivo.
+- **Verificación.** Build, ESLint y controles estáticos Floor de los archivos nuevos correctos. Se revisan capturas de escritorio y móvil y 21 combinaciones de diseño/ancho entre 320 y 1920 px, sin desbordamiento ni enlaces cortados. Comprobados el selector, las rutas anteriores, Heaven, la recarga de su ficha y el regreso.
+- **Hallmark.** El renderizador genera 15 capturas de revisión y permitió corregir el contraste de Signal. Persisten observaciones Reflex y de composición/densidad. Se conserva el negro del fondo de la captura real para hacer su recorte continuo, con la excepción documentada. No se presenta la exploración como una auditoría completa aprobada.
+- **Entrega.** Se actualiza la comparativa de GitHub Pages para poder revisar las propuestas desde otros dispositivos, manteniendo la portada principal. La elección continúa pendiente.
+
 ## Historial
 
 - **24 de noviembre de 2026.** Wilmer eligió Heaven como proyecto destacado y confirmó su preferencia por una portada clara. Se registraron la paleta inicial, las propuestas de tipografía y composición y la forma de trabajo.
@@ -158,3 +172,5 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **24 de noviembre de 2026.** Creadas tres propuestas comparables (Editorial, Técnica y Producto) y una galería con la versión actual. Se documentan las adaptaciones de Hallmark, las fuentes locales, el flujo de capturas y la elección pendiente de Wilmer.
 
 - **24 de noviembre de 2026.** Publicación de la versión de prueba en el GitHub Pages existente por petición de Wilmer; el código se guarda en prueba-hallmark y la elección de diseño sigue pendiente.
+
+- **24 de noviembre de 2026.** Wilmer aporta las cuatro referencias originales y amplía el alcance a rediseños completos. Se crean Módulo, Órbita y Signal; se conservan las versiones anteriores y se actualiza la comparativa para continuar la elección.

@@ -18,7 +18,7 @@ mkdirSync(output, { recursive: true });
 const browser = await puppeteer.launch({ executablePath, headless: true });
 const results = [];
 try {
-  for (const design of ['actual', 'editorial', 'tecnica', 'producto']) {
+  for (const design of ['actual', 'modulo', 'orbita', 'signal']) {
     const page = await browser.newPage();
     for (const [device, width, height] of [['desktop', 1280, 800], ['phone', 390, 844]]) {
       await page.setViewport({ width, height, deviceScaleFactor: 1 });
@@ -35,7 +35,7 @@ try {
         width: innerWidth,
         overflow: document.documentElement.scrollWidth > innerWidth,
         actionBottom: Math.round(document.querySelector('.project-cta').getBoundingClientRect().bottom),
-        columns: getComputedStyle(document.querySelector('.mosaic')).gridTemplateColumns.split(' ').length,
+        columns: getComputedStyle(document.querySelector('.mosaic, .modulo-grid, .orbita-hero, .signal-grid')).gridTemplateColumns.split(' ').length,
       }));
       results.push({ design, device, file, ...measurements });
     }

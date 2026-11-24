@@ -69,3 +69,11 @@ npm run build
 ```
 
 La última compilación copia las capturas de [public/design-previews](public/design-previews) al resultado publicable. La galería no guarda una elección ni sustituye la portada principal.
+
+## Rediseños futuristas
+
+La galería principal compara Actual con **Módulo**, **Órbita** y **Signal**. Las primeras pruebas Editorial, Técnica y Producto siguen bajo «Ver las primeras variaciones» y sus rutas anteriores.
+
+Los rediseños usan composiciones propias en [FutureConcept.tsx](src/components/designs/FutureConcept.tsx), comparten los datos tipados de Heaven y conservan la ficha existente. Sus fuentes y licencias están en [public/fonts/future](public/fonts/future).
+
+`npm run capture:designs` regenera las ocho capturas de la comparación principal. Las capturas de las primeras variaciones se conservan.

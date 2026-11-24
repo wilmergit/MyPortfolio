@@ -43,6 +43,10 @@
 .gallery-option-footer p { font-size: 14px; color: var(--lab-muted); max-width: 35ch; margin: 0; }
 .gallery-option-footer a { white-space: nowrap; font-size: 14px; }
 .gallery-note { margin: 44px 0 0; border-top: 1px solid var(--lab-line); padding-top: 24px; color: var(--lab-muted); font-size: 14px; }
+.gallery-previous { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--lab-line); font-size: 14px; }
+.gallery-previous summary { cursor: pointer; padding: 12px 0; }
+.gallery-previous summary:focus-visible { outline: 3px solid var(--lab-focus); outline-offset: 4px; }
+.gallery-previous nav { display: flex; gap: 24px; flex-wrap: wrap; }
 
 .design-toolbar { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px 28px; background: var(--lab-ink); color: var(--lab-paper); padding: 14px max(20px, calc((100% - 1224px) / 2)); font: 14px/1.5 var(--lab-body); }
 .design-toolbar > div { display: flex; flex-wrap: wrap; gap: 20px; }
