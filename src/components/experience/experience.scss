@@ -1,13 +1,16 @@
 .experience-card { grid-column: span 4; background: var(--ink); color: var(--paper); }
-.credential-mark { font: 20px var(--mono); color: #aaa; }
-.credential { padding: 32px 0 28px; }
-.credential h2 { font: 600 clamp(34px, 4vw, 50px)/1 var(--display); margin: 16px 0 8px; }
-.credential-role { color: #eea8a8; font-size: 14px; }
-.credential > p:not(.credential-role), .previous-experience p { color: #c4c4c3; font-size: 13px; line-height: 1.7; }
-.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-.tech-tags span { padding: 7px 9px; border: 1px solid #626366; border-radius: 4px; font: 10px var(--mono); }
-.previous-experience { border-top: 1px dashed #666; padding-top: 24px; }
-.previous-experience h3 { font-size: 20px; margin: 12px 0; }
-.experience-tools { display: flex; align-items: center; gap: 10px; margin-top: 24px; }
+.credential-mark { font: 16px var(--mono); color: var(--muted-on-dark); }
+.credential { padding-top: 18px; }
+.credential h2 { font: 600 clamp(32px, 3.4vw, 44px)/1.05 var(--display); margin: 0 0 8px; }
+.credential-role { color: var(--role-on-dark); font-size: 16px; margin: 0 0 10px; }
+.credential > p:not(.credential-role) { color: var(--muted-on-dark); }
+.credential > p:not(.credential-role):not(.eyebrow) { font-size: 15px; line-height: 1.6; margin: 12px 0 16px; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tech-tags span { padding: 6px 8px; border: 1px solid var(--border-on-dark); border-radius: 4px; font: 12px var(--mono); }
+.previous-experience { grid-column: span 4; background: var(--surface-about); }
+.previous-experience h2 { font: 600 28px/1.1 var(--display); margin: 14px 0 10px; }
+.previous-experience p { font-size: 15px; line-height: 1.6; margin: 0; }
+.experience-tools { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
 .experience-tools img { width: 24px; height: 24px; object-fit: contain; }
-.experience-tools span { margin-left: auto; font: 9px var(--mono); color: #bcbcbc; }
+.experience-tools span { margin-left: auto; font-size: 12px; }
+@media (max-width: 640px) { .credential { padding-top: 14px; } }

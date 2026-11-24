@@ -108,9 +108,53 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - Escritorio revisado visualmente; a 320 y 390 px se comprueba una sola columna y ausencia de desbordamiento horizontal. Foco de teclado y salto al contenido comprobados.
 - Publicación y prueba remota: pendientes, fuera de esta entrega local.
 
+
+## Ajustes tras la auditoría visual — 24 de noviembre de 2026
+
+- **Jerarquía.** Se compacta el nombre y la presentación. La tarjeta muestra Heaven, el enlace a su ficha y el resumen antes de la imagen. El enlace queda dentro de los primeros 800 px en los anchos comprobados.
+- **Encuadre estable.** El tipo de imagen de Project incorpora dimensiones y un cardViewBox opcional. La tarjeta usa un SVG como ventana de recorte sobre la captura original, con proporción constante y el cartucho completo. No se dibuja ni se altera la imagen. La ficha conserva la captura completa.
+- **Asimetría.** Heaven ocupa ocho columnas y dos filas; Casamedia e IsardVDI × ITB son piezas independientes de cuatro columnas a su lado. A anchuras intermedias se usa una relación siete/cinco. En móvil se apilan Heaven, Casamedia, IsardVDI, presentación y contacto, en ese orden.
+- **Lectura y teclado.** Etiquetas y pie aumentan a 12 px. La experiencia usa texto de 15 px y el resumen de Heaven 16 px. El enlace sobre rojo tiene un foco oscuro para mejorar el contraste.
+- **Herramientas.** Se añade puppeteer-core como dependencia de desarrollo y el lanzador scripts/hallmark.mjs. Los comandos npm run capture:visual y npm run audit:visual usan Chrome o Edge instalado y la skill Hallmark local. Las capturas temporales de .hallmark se excluyen de Git. No se descarga otro navegador.
+- **Rama actual.** Los ajustes continúan en prueba-hallmark, la rama encontrada al comenzar esta iteración.
+- **Verificación.** Build, ESLint y comprobación del diff correctos. Capturas revisadas a 1280, 834 y 390 px; comprobación automática sin desbordamiento a 320, 390, 834, 1280 y 1920 px. La parte inferior de «Ver proyecto» queda a 557, 491, 424, 481 y 484 px respectivamente. Probados tarjeta a ficha, recarga con imagen y vuelta a portada.
+- **Hallmark operativo, con hallazgos pendientes.** El renderizador ya produce cinco capturas adicionales. La última auditoría devuelve 11 FAIL, 3 REFLEX y 1 WARN; no se considera aprobada. Quedan reglas sobre etiquetas, asteriscos decorativos, densidad y composición de la página. El aviso estático de falta de foco en App no reconoce el Sass global; el foco existe y el renderizador ya no señala el contraste del contacto. No se amplía esta corrección a un rediseño completo para satisfacer reglas que cambiarían la composición acordada.
+- **Publicación.** Se actualiza la previsualización local. No se despliega a GitHub Pages.
+
+
+## Exploración de tres alternativas — 24 de noviembre de 2026
+
+- **Estado.** Se preparan tres propuestas para comparar; no se selecciona ninguna como diseño definitivo. La portada actual sigue en la ruta principal. La exploración está en `#/disenos`.
+- **Editorial, `#/disenos/editorial`.** Inspirada en el tema Editorial de Hallmark: titulares Bricolage Grotesque, lectura Source Serif 4, separadores fuertes y Heaven compuesto como una pieza de revista. Se adapta el verde del tema al rojo de Wilmer y se mantienen las piezas asimétricas.
+- **Técnica, `#/disenos/tecnica`.** Inspirada en Cobalt: Chakra Petch, IBM Plex Sans, paneles rectos y superficies claras más frías. Se conserva el rojo como acento; no se copia el campo ASCII ni se inventan datos técnicos.
+- **Producto, `#/disenos/producto`.** Inspirada en las superficies cálidas y suaves de Coral: IBM Plex Sans, esquinas amplias, experiencia de menor contraste e imagen de Heaven de mayor tamaño. Es una adaptación de la dirección material; no una reproducción literal del tema ni de su animación de papelería.
+- **Elementos compartidos.** Nombre, rol, experiencia, presentación, contacto, datos de Heaven y su ficha. Las variaciones reutilizan Header, Intro y Body y aplican estilos bajo una clase de tema. Los ajustes se limitan a las propuestas y la portada actual añade un enlace de comparación en el pie.
+- **Comparación.** La galería muestra capturas reales de las cuatro versiones y permite alternar escritorio/móvil. Cada propuesta se puede abrir e interactuar; abrirla no guarda una elección. Desde Heaven se visita la ficha existente y el botón Atrás del navegador regresa a la propuesta.
+- **Fuentes.** Las cinco variantes de fuentes de las propuestas se alojan localmente con sus cuatro licencias OFL, evitando depender de Google Fonts para esas familias. Las fuentes de la portada original mantienen su configuración.
+- **Capturas.** `npm run capture:designs` genera ocho PNG en public/design-previews. Para actualizarlas: compilar, arrancar la previsualización, capturar y volver a compilar para copiar las capturas al build. El script elimina la barra comparativa de las capturas mediante `?capture`, pero la muestra en las vistas interactivas.
+- **Verificación.** Build y ESLint correctos; capturas inspeccionadas en escritorio y móvil. Comprobados galería, selector, navegación a Heaven, recarga de la ficha y regreso. Las propuestas se revisan como exploraciones visuales, no como una auditoría de Hallmark aprobada: persisten criterios heredados sobre densidad de texto y estructura del hero.
+- **Pendiente.** Wilmer puede elegir una propuesta, mantener la actual o pedir una combinación custom. No hay despliegue ni cambio de diseño definitivo.
+
+
+## Publicación de la versión de prueba — 24 de noviembre de 2026
+
+- Wilmer solicita guardar los cambios en la rama prueba-hallmark y hacer la web accesible desde móvil y portátil.
+- Se confirma mediante la API de GitHub la configuración de Pages: rama gh-pages, directorio raíz, sin dominio personalizado.
+- Se ejecuta npm run deploy; Vite compila correctamente y gh-pages publica el resultado.
+- Portada pública: https://wilmergit.github.io/MyPortfolio/
+- Comparación pública: https://wilmergit.github.io/MyPortfolio/#/disenos
+- El código y las alternativas se conservan en prueba-hallmark. La portada principal sigue siendo la versión actual; la elección de una alternativa continúa pendiente.
+- Esta publicación usa el dominio existente de GitHub Pages y sustituye su contenido por la versión de prueba. No requiere tener el servidor local encendido.
+
 ## Historial
 
 - **24 de noviembre de 2026.** Wilmer eligió Heaven como proyecto destacado y confirmó su preferencia por una portada clara. Se registraron la paleta inicial, las propuestas de tipografía y composición y la forma de trabajo.
 - **24 de noviembre de 2026.** Wilmer confirmó la autoría de Heaven, propuso su hero y compartió el repositorio MyPortfolio y Hallmark. Se documentaron la recomendación de mantener el stack existente y el traspaso a VS Code.
 
 - **24 de noviembre de 2026.** Implementada la primera maqueta de portada y ficha de Heaven en la rama de rediseño. Documentados el flujo tipado, la navegación con hash para Pages, las comprobaciones locales y la ausencia de las referencias originales en el contexto recibido.
+
+- **24 de noviembre de 2026.** Aplicadas las tres mejoras de la auditoría: jerarquía de Heaven, recorte estable y experiencia más compacta. Habilitado puppeteer-core con Edge; documentados comandos, capturas, validación y hallazgos pendientes de Hallmark.
+
+- **24 de noviembre de 2026.** Creadas tres propuestas comparables (Editorial, Técnica y Producto) y una galería con la versión actual. Se documentan las adaptaciones de Hallmark, las fuentes locales, el flujo de capturas y la elección pendiente de Wilmer.
+
+- **24 de noviembre de 2026.** Publicación de la versión de prueba en el GitHub Pages existente por petición de Wilmer; el código se guarda en prueba-hallmark y la elección de diseño sigue pendiente.

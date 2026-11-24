@@ -9,8 +9,11 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "audit:visual": "node scripts/hallmark.mjs audit",
+    "capture:visual": "node scripts/hallmark.mjs capture",
+    "capture:designs": "node scripts/design-previews.mjs"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
@@ -27,6 +30,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.2.0",
+    "puppeteer-core": "^25.18.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.34.1",
     "vite": "^7.0.0"

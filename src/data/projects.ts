@@ -7,7 +7,7 @@ export interface Project {
   summary: string;
   role: string;
   technologies: readonly string[];
-  image: { src: string; alt: string };
+  image: { src: string; alt: string; width: number; height: number; cardViewBox?: string };
   problem: string;
   contribution: string;
   scope: string;
@@ -26,6 +26,9 @@ export const projects: readonly Project[] = [
     image: {
       src: heavenHero,
       alt: 'Portada de Heaven, con un cartucho morado como elemento principal.',
+      width: 1895,
+      height: 921,
+      cardViewBox: '1120 70 420 500',
     },
     problem: 'Heaven nace como una web concebida para la compraventa de videojuegos: un espacio para presentar una experiencia centrada en el mundo del gaming.',
     contribution: 'Desarrollé el proyecto completo, desde la construcción de la interfaz hasta la integración de sus distintas pantallas y funcionalidades.',

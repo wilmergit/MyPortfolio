@@ -1,5 +1,6 @@
-:root { font-family: 'Inter', Arial, sans-serif; color: #282a2e; background: #f5f4f0; font-synthesis: none; --paper: #f5f4f0; --ink: #282a2e; --red: #fa081b; --line: #d1d0ca; --mono: 'IBM Plex Mono', monospace; --display: 'Archivo Narrow', 'Arial Narrow', sans-serif; }
+:root { font-family: 'Inter', Arial, sans-serif; color: #282a2e; background: #f5f4f0; font-synthesis: none; --paper: #f5f4f0; --ink: #282a2e; --red: #fa081b; --line: #d1d0ca; --mono: 'IBM Plex Mono', monospace; --display: 'Archivo Narrow', 'Arial Narrow', sans-serif; --surface-project: #e7e5e1; --surface-about: #eeede9; --image-backdrop: #080709; --on-red: #130103; --white: #fff; --muted-on-dark: #c4c4c3; --role-on-dark: #eea8a8; --border-on-dark: #626366; }
 * { box-sizing: border-box; }
+html, body { overflow-x: clip; }
 body { margin: 0; min-width: 320px; }
 a { color: inherit; text-underline-offset: 5px; }
 a:hover { text-decoration-thickness: 2px; }
@@ -8,11 +9,11 @@ main:focus { outline: none; }
 p { line-height: 1.6; }
 ::selection { background: #282a2e; color: #fff; }
 .page-shell { max-width: 1320px; padding: 0 48px; margin: auto; }
-.eyebrow { font: 10px/1.5 var(--mono); letter-spacing: .06em; }
+.eyebrow { font: 12px/1.5 var(--mono); letter-spacing: 0; }
 .text-link { font-size: 13px; display: inline-block; }
 .skip-link { position: fixed; top: -100px; left: 20px; padding: 14px; z-index: 10; background: var(--ink); color: white; }
 .skip-link:focus { top: 10px; }
-.footer { border-top: 1px solid var(--line); margin-top: 42px; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font: 10px/1.6 var(--mono); }
+.footer { border-top: 1px solid var(--line); margin-top: 42px; padding: 24px 0; display: flex; justify-content: space-between; gap: 20px; font: 12px/1.6 var(--mono); }
 .project-detail { padding-top: 36px; }
 .detail-heading { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin: 40px 0 32px; }
 .detail-heading h1 { font: 700 clamp(72px, 12vw, 140px)/.95 var(--display); color: var(--red); margin: 16px 0 0; letter-spacing: -.04em; }

@@ -33,8 +33,39 @@ La captura original de Heaven procede de [su repositorio](https://github.com/wil
 - URL de portada: https://wilmergit.github.io/MyPortfolio/
 - URL de ficha: https://wilmergit.github.io/MyPortfolio/#/proyectos/heaven
 - `npm run deploy` ejecuta primero la compilación y publica `dist` en `gh-pages`.
-- En GitHub, Pages debe estar configurado para publicar desde la raíz de la rama `gh-pages`. La existencia de la rama está comprobada localmente; la configuración remota debe comprobarse al publicar.
+- En GitHub, Pages debe estar configurado para publicar desde la raíz de la rama `gh-pages`. Configuración confirmada mediante la API de GitHub: rama gh-pages, directorio raíz.
 - La ruta tras `#` la interpreta React. GitHub Pages recibe siempre `/MyPortfolio/`, por lo que la recarga de la ficha no requiere redirecciones ni un servidor propio.
-- El despliegue no es automático desde la rama de rediseño. No se ha publicado esta iteración.
+- El despliegue es manual. Versión de prueba publicada el 24 de noviembre de 2026 desde prueba-hallmark. Comparación pública: https://wilmergit.github.io/MyPortfolio/#/disenos
 
 Las decisiones y asuntos pendientes se registran en [decisiones-portfolio.md](decisiones-portfolio.md).
+
+## Capturas y auditoría visual
+
+`puppeteer-core` está instalado como dependencia de desarrollo. Usa el navegador Chromium disponible; no descarga uno adicional. El lanzador detecta Chrome o Edge en Windows y acepta `CHROME_PATH` para otra ubicación.
+
+Con la previsualización en marcha (`npm run preview`), ejecuta:
+
+```sh
+npm run capture:visual
+npm run audit:visual
+```
+
+Se requiere la skill Hallmark instalada en `~/.agents/skills/hallmark`, `~/.codex/skills/hallmark` o la ubicación indicada en `HALLMARK_HOME`. `PORTFOLIO_AUDIT_URL` permite cambiar la URL por defecto. Las capturas se guardan en `.hallmark/previews` y `.hallmark/shots`, excluidas de Git.
+
+La auditoría comunica hallazgos de las reglas de diseño de Hallmark y puede devolver un código distinto de cero aunque la web compile y navegue correctamente. Un informe con hallazgos no debe interpretarse como una auditoría aprobada.
+
+## Comparar diseños
+
+Abrir `/MyPortfolio/#/disenos` para comparar la portada actual con las propuestas Editorial, Técnica y Producto. El selector cambia las capturas entre escritorio y móvil; los enlaces abren cada versión interactiva.
+
+Las propuestas usan los mismos componentes y datos del portfolio y conservan la ficha de Heaven. Sus fuentes adicionales y licencias están en [public/fonts/designs](public/fonts/designs).
+
+Para regenerar las ocho capturas incluidas en la galería, con `npm run preview` en marcha:
+
+```sh
+npm run build
+npm run capture:designs
+npm run build
+```
+
+La última compilación copia las capturas de [public/design-previews](public/design-previews) al resultado publicable. La galería no guarda una elección ni sustituye la portada principal.
