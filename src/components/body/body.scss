@@ -1,5 +1,23 @@
-@use "../../variables.scss" as var;
-
-.body-content{
-    width: 100%;
-}
+.mosaic { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 18px; }
+.tile { border: 1px solid var(--line); border-radius: 14px; padding: 26px; overflow: hidden; }
+.tile-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.project-card { grid-column: span 8; display: flex; flex-direction: column; color: var(--ink); background: #e7e5e1; text-decoration: none; transition: border-color .2s; }
+.project-card:hover { border-color: var(--ink); }
+.round-arrow { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid #b7b4b0; border-radius: 50%; font-size: 22px; transition: transform .2s; }
+.project-card:hover .round-arrow { transform: rotate(45deg); }
+.project-image { position: relative; flex: 1; min-height: 320px; margin: 22px -5px; border-radius: 8px; overflow: hidden; background: #000; }
+.project-image img { position: absolute; width: 180%; height: auto; max-width: none; left: -72%; top: -20%; clip-path: inset(10% 18% 42% 52%); display: block; }
+.project-caption { display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.project-caption h2 { font: 600 54px/1 var(--display); margin: 9px 0; letter-spacing: -.03em; }
+.project-caption p { font-size: 14px; max-width: 330px; margin-bottom: 0; }
+.project-cta { white-space: nowrap; font-size: 12px; border-bottom: 1px solid; padding-bottom: 6px; }
+.about-card { grid-column: span 7; background: #eeede9; }
+.about-card h2, .contact-card h2 { font: 600 clamp(32px, 3.5vw, 46px)/1.1 var(--display); letter-spacing: -.02em; margin: 28px 0 18px; }
+.about-card h2 span { color: var(--red); }
+.about-card p { max-width: 430px; font-size: 14px; line-height: 1.7; margin-bottom: 26px; }
+.contact-card { grid-column: span 5; background: var(--red); color: #130103; position: relative; }
+.contact-card h2 { color: #fff; }
+.contact-card .text-link { position: relative; z-index: 1; }
+.contact-star { position: absolute; right: 12px; bottom: -33px; font: 170px/1 sans-serif; color: #fff; opacity: .16; }
+@media (max-width: 900px) { .project-card { grid-column: span 7; } .experience-card { grid-column: span 5; } .project-caption { display: block; } .project-cta { display: inline-block; margin-top: 20px; } }
+@media (max-width: 640px) { .mosaic { grid-template-columns: minmax(0, 1fr); gap: 14px; } .mosaic > * { grid-column: 1; } .tile { padding: 22px; } .project-image { min-height: 260px; flex: none; } .project-image img { width: 320%; left: -174%; top: -10%; } }

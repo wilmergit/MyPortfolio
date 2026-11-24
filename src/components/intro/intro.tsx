@@ -1,34 +1,11 @@
-import "./intro.scss";
+import './intro.scss';
 
 export default function Intro() {
   return (
-    <div className="landpage">
-      <div className="intro-message">
-        <div className="message">
-          <div className="tags">
-            <h1 id="landpage-h1">Hola! Soy Wilmer</h1>
-            <p className="tag" id="lvl">
-              Junior
-            </p>
-            <p className="tag" id="availability">
-              Disponible para trabajar
-            </p>
-          </div>
-          <p className="landpage-p">Desarrollador Web Full stack.</p>
-          <p className="landpage-p">De Gran Canaria, España.</p>
-          <section className="socials">
-            <a href="https://github.com/wilmergit" id="git">
-              <i className="fa-brands fa-github"></i> Github
-            </a>
-            <a
-              href="https://www.linkedin.com/in/wilmer-zeas-rodriguez-084434252/"
-              id="linkedin"
-            >
-              <i className="fa-brands fa-linkedin-in"></i> Linkedin
-            </a>
-          </section>
-        </div>
-      </div>
-    </div>
+    <section className="intro" aria-labelledby="intro-title">
+      <div className="intro-label"><span className="eyebrow">GRAN CANARIA, ESPAÑA</span><span className="eyebrow">CÓDIGO + DISEÑO + CURIOSIDAD</span></div>
+      <h1 id="intro-title">WILMER <span>ZEAS</span><span className="name-star" aria-hidden="true">✳</span></h1>
+      <div className="intro-baseline"><p>Desarrollador Web <strong>Full Stack</strong></p><p>Del primer boceto<br />a la última línea de código.</p></div>
+    </section>
   );
 }
