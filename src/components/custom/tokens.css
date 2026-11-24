@@ -1,0 +1,17 @@
+:root {
+  --space-3xs: 2px; --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px; --space-xl: 40px; --space-2xl: 64px; --space-3xl: 96px; --space-4xl: 144px;
+  --custom-paper: var(--paper);
+  --custom-ink: var(--ink);
+  --custom-red: var(--red);
+  --custom-red-dark: oklch(43% .18 25);
+  --custom-contact-ink: oklch(15% .015 25);
+  --custom-rule: var(--line);
+  --custom-stage: #000;
+  --custom-stage-text: oklch(96% .005 25);
+  --custom-stage-rule: oklch(38% .005 25);
+  --custom-focus: oklch(48% .19 25);
+  --custom-display: 'Portfolio Archivo Narrow', 'Arial Narrow', sans-serif;
+  --custom-body: 'Portfolio Inter', Arial, sans-serif;
+  --custom-container: 1400px;
+  --custom-gutter: 48px;
+}

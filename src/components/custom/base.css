@@ -1,0 +1,15 @@
+/* Scoped base: the original portfolio keeps its own system. */
+.custom-portfolio { background: var(--custom-paper); color: var(--custom-ink); font-family: var(--custom-body); font-size: 16px; line-height: 1.6; font-synthesis: none; }
+.custom-container { width: 100%; max-width: var(--custom-container); margin-inline: auto; padding-inline: var(--custom-gutter); }
+.custom-portfolio h1, .custom-portfolio h2, .custom-portfolio h3 { overflow-wrap: break-word; min-width: 0; text-wrap: balance; }
+.custom-portfolio p { margin: 0; text-wrap: pretty; }
+.custom-portfolio a { text-underline-offset: 5px; }
+.custom-portfolio a:focus-visible { outline: 3px solid var(--custom-focus); outline-offset: 4px; }
+.custom-portfolio .custom-project a:focus-visible { outline-color: var(--custom-stage-text); }
+.custom-portfolio .custom-contact a:focus-visible { outline-color: var(--custom-contact-ink); }
+.custom-portfolio section:focus { outline: none; }
+.custom-skip { position: fixed; top: -120px; left: 16px; z-index: 500; padding: var(--space-md); background: var(--custom-ink); color: var(--custom-paper); }
+.custom-skip:focus { top: 16px; }
+@media (max-width: 800px) { .custom-portfolio { --custom-gutter: 24px; } }
+@media (max-width: 540px) { .custom-portfolio { --custom-gutter: 20px; } }
+@media (prefers-reduced-motion: reduce) { .custom-portfolio *, .custom-portfolio *::before, .custom-portfolio *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

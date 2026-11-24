@@ -160,6 +160,20 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **Hallmark.** El renderizador genera 15 capturas de revisión y permitió corregir el contraste de Signal. Persisten observaciones Reflex y de composición/densidad. Se conserva el negro del fondo de la captura real para hacer su recorte continuo, con la excepción documentada. No se presenta la exploración como una auditoría completa aprobada.
 - **Entrega.** Se actualiza la comparativa de GitHub Pages para poder revisar las propuestas desde otros dispositivos, manteniendo la portada principal. La elección continúa pendiente.
 
+## Portfolio custom sin mosaicos — 24 de noviembre de 2026
+
+- **Nueva decisión de Wilmer.** Se descartan las seis alternativas anteriores. El original continúa como portada principal; se abandona el mosaico para la nueva propuesta custom. Esta es una primera propuesta para revisar, no una elección definitiva.
+- **Dirección.** Recorrido vertical continuo: nombre rojo a gran escala, presentación y enlace a Heaven; Heaven como sección de ancho completo con el cartucho original; presentación, experiencia en dos registros de trabajo y contacto. Se conservan los colores y las familias tipográficas del original como punto de partida, sin tratar cada contenido como una tarjeta.
+- **Ruta.** La propuesta está en `#/custom`. Las rutas antiguas `#/disenos` y sus alternativas redirigen a ella. La portada original permanece en `#/`.
+- **Archivos retirados.** Se elimina la galería y sus composiciones en src/components/designs, sus capturas en public/design-previews, sus fuentes en public/fonts/designs y public/fonts/future y el generador scripts/design-previews.mjs. El historial de Git conserva las versiones descartadas.
+- **Fuentes.** El custom aloja Archivo Narrow e Inter localmente con sus licencias OFL. Usa nombres internos propios para no alterar la configuración tipográfica de la portada original. El tamaño del nombre se adapta para evitar palabras partidas.
+- **Datos de Heaven.** [CustomPortfolio](src/components/custom/CustomPortfolio.tsx) importa la misma colección tipada de [projects.ts](src/data/projects.ts), busca Heaven por su slug y entrega el objeto como prop de tipo Project a FeaturedProject. Este lee nombre, resumen, autoría, tecnologías, imagen y recorte. Su enlace construye la ruta con el slug y `?desde=custom`. [App](src/App.tsx) separa slug y parámetros, busca el mismo objeto y lo entrega a [ProjectDetail](src/components/projects/ProjectDetail.tsx). La prop opcional returnTo permite volver al custom; la navegación original conserva su vuelta a la portada.
+- **Imagen.** Se mantiene el cardViewBox tipado de Heaven. El SVG conserva la proporción 420/500 incluso cuando el ancho disponible lo reduce en tablet. La ficha muestra la captura completa.
+- **Accesibilidad.** Salto al contenido, foco visible, navegación por secciones con foco en el destino y enlaces utilizables con teclado. Los enlaces directos a las secciones también funcionan. La propuesta no incorpora animaciones.
+- **Verificación.** Build y ESLint correctos. Revisados siete anchos (320, 390, 540, 768, 834, 1280 y 1920 px), sin desbordamiento ni nombre cortado, con fuentes locales y proporción del cartucho comprobadas. Probados Heaven, recarga, enlace de vuelta, original, enlaces a secciones y redirección desde una propuesta retirada.
+- **Hallmark.** Auditoría renderizada limitada a los cuatro archivos del custom y a su ruta: 0 FAIL, 0 WARN y 3 excepciones documentadas. Se conserva el negro absoluto para coincidir con la captura real; el hero es compacto para que Heaven comience pronto; la experiencia usa dos registros reales en lugar de añadir un tercer elemento o imágenes de relleno para satisfacer el criterio de masa visual. La revisión visual se realiza en este hilo, sin un revisor independiente. Esto no certifica las rutas originales, que conservan sus hallazgos previos.
+- **Publicación.** Se actualiza la versión de prueba en GitHub Pages, conservando el original como portada. La propuesta se puede abrir en https://wilmergit.github.io/MyPortfolio/#/custom sin tener el servidor local encendido.
+
 ## Historial
 
 - **24 de noviembre de 2026.** Wilmer eligió Heaven como proyecto destacado y confirmó su preferencia por una portada clara. Se registraron la paleta inicial, las propuestas de tipografía y composición y la forma de trabajo.
@@ -174,3 +188,5 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **24 de noviembre de 2026.** Publicación de la versión de prueba en el GitHub Pages existente por petición de Wilmer; el código se guarda en prueba-hallmark y la elección de diseño sigue pendiente.
 
 - **24 de noviembre de 2026.** Wilmer aporta las cuatro referencias originales y amplía el alcance a rediseños completos. Se crean Módulo, Órbita y Signal; se conservan las versiones anteriores y se actualiza la comparativa para continuar la elección.
+
+- **24 de noviembre de 2026.** Wilmer descarta las alternativas, conserva el original y solicita Hallmark custom sin mosaicos. Se crea una propuesta vertical independiente, se retiran los diseños descartados y se conserva la navegación tipada de Heaven.

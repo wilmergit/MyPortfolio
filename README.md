@@ -1,6 +1,6 @@
 # Portfolio de Wilmer Zeas Rodriguez
 
-React 19, TypeScript, Vite y Sass. Primera iteración del rediseño: portada en mosaico y ficha de Heaven.
+React 19, TypeScript, Vite y Sass. Portada original y ficha de Heaven, con una propuesta custom de recorrido vertical en una ruta independiente.
 
 ## Desarrollo
 
@@ -35,7 +35,7 @@ La captura original de Heaven procede de [su repositorio](https://github.com/wil
 - `npm run deploy` ejecuta primero la compilación y publica `dist` en `gh-pages`.
 - En GitHub, Pages debe estar configurado para publicar desde la raíz de la rama `gh-pages`. Configuración confirmada mediante la API de GitHub: rama gh-pages, directorio raíz.
 - La ruta tras `#` la interpreta React. GitHub Pages recibe siempre `/MyPortfolio/`, por lo que la recarga de la ficha no requiere redirecciones ni un servidor propio.
-- El despliegue es manual. Versión de prueba publicada el 24 de noviembre de 2026 desde prueba-hallmark. Comparación pública: https://wilmergit.github.io/MyPortfolio/#/disenos
+- El despliegue es manual. Versión de prueba publicada el 24 de noviembre de 2026 desde prueba-hallmark. Propuesta custom: https://wilmergit.github.io/MyPortfolio/#/custom
 
 Las decisiones y asuntos pendientes se registran en [decisiones-portfolio.md](decisiones-portfolio.md).
 
@@ -54,26 +54,22 @@ Se requiere la skill Hallmark instalada en `~/.agents/skills/hallmark`, `~/.code
 
 La auditoría comunica hallazgos de las reglas de diseño de Hallmark y puede devolver un código distinto de cero aunque la web compile y navegue correctamente. Un informe con hallazgos no debe interpretarse como una auditoría aprobada.
 
-## Comparar diseños
+## Propuesta custom
 
-Abrir `/MyPortfolio/#/disenos` para comparar la portada actual con las propuestas Editorial, Técnica y Producto. El selector cambia las capturas entre escritorio y móvil; los enlaces abren cada versión interactiva.
+La portada original permanece en `#/`. La nueva propuesta sin mosaicos se abre en [Portfolio custom](https://wilmergit.github.io/MyPortfolio/#/custom).
 
-Las propuestas usan los mismos componentes y datos del portfolio y conservan la ficha de Heaven. Sus fuentes adicionales y licencias están en [public/fonts/designs](public/fonts/designs).
+[CustomPortfolio.tsx](src/components/custom/CustomPortfolio.tsx) compone un recorrido vertical con tipografía grande, Heaven, presentación, experiencia y contacto. Reutiliza el objeto Project de Heaven. El parámetro `?desde=custom` permite que la ficha vuelva a esta propuesta; desde el original sigue volviendo a la portada.
 
-Para regenerar las ocho capturas incluidas en la galería, con `npm run preview` en marcha:
+Las seis alternativas descartadas, sus capturas, sus fuentes y el script de comparación se han retirado. Las rutas `#/disenos` y `#/disenos/<alternativa>` redirigen a `#/custom`; su implementación anterior permanece en el historial de Git.
 
-```sh
-npm run build
-npm run capture:designs
-npm run build
+Los archivos de fuente del custom y sus licencias OFL están en [public/fonts/custom](public/fonts/custom). Se usan nombres internos propios para preservar la configuración del original.
+
+Para capturar o auditar esta ruta en PowerShell, con la previsualización iniciada:
+
+```powershell
+$env:PORTFOLIO_AUDIT_URL = 'http://127.0.0.1:4173/MyPortfolio/#/custom'
+npm.cmd run capture:visual
+npm.cmd run audit:visual
 ```
 
-La última compilación copia las capturas de [public/design-previews](public/design-previews) al resultado publicable. La galería no guarda una elección ni sustituye la portada principal.
-
-## Rediseños futuristas
-
-La galería principal compara Actual con **Módulo**, **Órbita** y **Signal**. Las primeras pruebas Editorial, Técnica y Producto siguen bajo «Ver las primeras variaciones» y sus rutas anteriores.
-
-Los rediseños usan composiciones propias en [FutureConcept.tsx](src/components/designs/FutureConcept.tsx), comparten los datos tipados de Heaven y conservan la ficha existente. Sus fuentes y licencias están en [public/fonts/future](public/fonts/future).
-
-`npm run capture:designs` regenera las ocho capturas de la comparación principal. Las capturas de las primeras variaciones se conservan.
+El comando general de auditoría incluye también archivos originales; no equivale al resultado focalizado del custom documentado en [decisiones-portfolio.md](decisiones-portfolio.md).
