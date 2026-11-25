@@ -1,16 +1,10 @@
-.experience-card { grid-column: span 4; background: var(--ink); color: var(--paper); }
-.credential-mark { font: 16px var(--mono); color: var(--muted-on-dark); }
-.credential { padding-top: 18px; }
-.credential h2 { font: 600 clamp(32px, 3.4vw, 44px)/1.05 var(--display); margin: 0 0 8px; }
-.credential-role { color: var(--role-on-dark); font-size: 16px; margin: 0 0 10px; }
-.credential > p:not(.credential-role) { color: var(--muted-on-dark); }
-.credential > p:not(.credential-role):not(.eyebrow) { font-size: 15px; line-height: 1.6; margin: 12px 0 16px; }
-.tech-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tech-tags span { padding: 6px 8px; border: 1px solid var(--border-on-dark); border-radius: 4px; font: 12px var(--mono); }
-.previous-experience { grid-column: span 4; background: var(--surface-about); }
-.previous-experience h2 { font: 600 28px/1.1 var(--display); margin: 14px 0 10px; }
-.previous-experience p { font-size: 15px; line-height: 1.6; margin: 0; }
-.experience-tools { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
-.experience-tools img { width: 24px; height: 24px; object-fit: contain; }
-.experience-tools span { margin-left: auto; font-size: 12px; }
-@media (max-width: 640px) { .credential { padding-top: 14px; } }
+.experience-card { grid-column: span 4; background: var(--ink); color: var(--paper); display: flex; flex-direction: column; align-self: stretch; }
+.experience-heading { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.experience-heading h2 { font: 600 clamp(28px, 2.6vw, 36px)/1.1 var(--display); margin: 0; min-width: 0; }
+.experience-period { flex-shrink: 0; max-width: 16ch; text-align: right; font: 12px/1.5 var(--mono); margin: 0; color: var(--muted-on-dark); }
+.experience-role { color: var(--role-on-dark); font-size: 14px; line-height: 1.5; margin: 8px 0 0; }
+.experience-description { color: var(--muted-on-dark); font-size: 14px; line-height: 1.5; margin: 10px 0 14px; }
+.tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+.tech-tags span { padding: 4px 7px; border: 1px solid var(--border-on-dark); border-radius: 4px; font: 12px/1.4 var(--mono); }
+@media (max-width: 1100px) { .experience-heading { display: block; } .experience-period { text-align: left; max-width: none; margin-top: 6px; } }
+@media (max-width: 640px) { .experience-heading h2 { font-size: 32px; } .experience-description { font-size: 15px; line-height: 1.6; } .experience-role { font-size: 16px; } }

@@ -174,6 +174,17 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **Hallmark.** Auditoría renderizada limitada a los cuatro archivos del custom y a su ruta: 0 FAIL, 0 WARN y 3 excepciones documentadas. Se conserva el negro absoluto para coincidir con la captura real; el hero es compacto para que Heaven comience pronto; la experiencia usa dos registros reales en lugar de añadir un tercer elemento o imágenes de relleno para satisfacer el criterio de masa visual. La revisión visual se realiza en este hilo, sin un revisor independiente. Esto no certifica las rutas originales, que conservan sus hallazgos previos.
 - **Publicación.** Se actualiza la versión de prueba en GitHub Pages, conservando el original como portada. La propuesta se puede abrir en https://wilmergit.github.io/MyPortfolio/#/custom sin tener el servidor local encendido.
 
+## Selección del original y portada compacta — 25 de noviembre de 2026
+
+- **Elección de Wilmer.** Se elige el diseño original. Las pruebas de Archivo, Escena y Carta quedan conservadas en la rama exploracion-custom-portadas, sin incorporarlas a la portada elegida.
+- **Identidad.** El nombre Wilmer Zeas sustituye a WZ en la cabecera. Se retira el nombre gigante de la presentación; el h1 pasa a indicar el rol, acompañado de Gran Canaria y de la frase de presentación.
+- **Escritorio.** Se compactan cabecera, introducción, márgenes y tarjetas, conservando el mosaico y todos los bloques de contenido. Heaven ocupa siete columnas y la experiencia cinco. En ventanas anchas de hasta 720 px de alto, el mosaico usa tres columnas: Heaven, experiencia y presentación/contacto. Se adapta el reparto en vez de ocultar contenido o reducir el texto a tamaños de difícil lectura.
+- **Móvil y tablet.** Se mantiene el desplazamiento vertical natural. El nombre y los enlaces de cabecera caben en pantallas estrechas; las tarjetas siguen su recorrido vertical.
+- **Experiencia coherente.** Casamedia e IsardVDI × ITB se generan con el mismo componente y estructura: empresa y periodo, puesto, descripción y tecnologías. Comparten fondo oscuro, tipografía, separaciones y etiquetas de texto. Se retiran los logos de Vue y Storybook de la tarjeta. Las fechas se abrevian visualmente y conservan el periodo completo en el atributo title.
+- **Navegación.** Se conserva el enlace de Heaven a su ficha y el regreso a portada. El pie de la portada elegida deja de promocionar una alternativa custom.
+- **Verificación.** TypeScript/Vite y ESLint correctos. Portada completa, incluido el pie, comprobada sin scroll vertical en 1024×768, 1280×600, 1280×720, 1366×768, 1440×900 y 1920×1080. Comprobados 320, 390 y 834 px sin desbordamiento horizontal; teclado, salto al contenido, ficha de Heaven, recarga y vuelta correctos. El diseño conserva el flujo normal: ante ventanas excepcionalmente pequeñas, zoom o texto ampliado, permite scroll en lugar de recortar el contenido.
+- **Rama.** Ajustes guardados en ajustes-original-escritorio, creada desde prueba-hallmark para conservar las exploraciones aparte.
+
 ## Historial
 
 - **24 de noviembre de 2026.** Wilmer eligió Heaven como proyecto destacado y confirmó su preferencia por una portada clara. Se registraron la paleta inicial, las propuestas de tipografía y composición y la forma de trabajo.
@@ -190,3 +201,5 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **24 de noviembre de 2026.** Wilmer aporta las cuatro referencias originales y amplía el alcance a rediseños completos. Se crean Módulo, Órbita y Signal; se conservan las versiones anteriores y se actualiza la comparativa para continuar la elección.
 
 - **24 de noviembre de 2026.** Wilmer descarta las alternativas, conserva el original y solicita Hallmark custom sin mosaicos. Se crea una propuesta vertical independiente, se retiran los diseños descartados y se conserva la navegación tipada de Heaven.
+
+- **25 de noviembre de 2026.** Wilmer elige el original. Se compacta su portada para escritorio, se lleva el nombre a la cabecera y se unifican las dos experiencias con tecnologías escritas. Las exploraciones permanecen en su rama independiente.

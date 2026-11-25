@@ -31,7 +31,7 @@ export default function App() {
   }, [isHome, isCustom, isDesign, project]);
   if (isCustom) return <CustomPortfolio route={route} />;
   return (
-    <div className="page-shell">
+    <div className={`page-shell${isHome ? ' home-shell' : ''}`}>
       <a className="skip-link" href="#contenido" onClick={(event) => { event.preventDefault(); main.current?.focus(); }}>Saltar al contenido</a>
       <Header />
       <main id="contenido" ref={main} tabIndex={-1}>
@@ -39,7 +39,7 @@ export default function App() {
           <section className="not-found"><p className="eyebrow">404 / Fuera del mapa</p><h1>Esta página no existe.</h1><a href="#/">Volver a la portada ↗</a></section>
         )}
       </main>
-      <footer className="footer"><span>© {new Date().getFullYear()} Wilmer Zeas Rodriguez</span><span>Diseñado con intención. Construido con React.</span><a href="#/custom">Ver propuesta custom</a><a href="https://github.com/wilmergit">GitHub ↗</a></footer>
+      <footer className="footer"><span>© {new Date().getFullYear()} Wilmer Zeas Rodriguez</span><span>Diseñado con intención. Construido con React.</span>{!isHome && <a href="#/custom">Ver propuesta custom</a>}<a href="https://github.com/wilmergit">GitHub ↗</a></footer>
     </div>
   );
 }

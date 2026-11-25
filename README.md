@@ -73,3 +73,9 @@ npm.cmd run audit:visual
 ```
 
 El comando general de auditoría incluye también archivos originales; no equivale al resultado focalizado del custom documentado en [decisiones-portfolio.md](decisiones-portfolio.md).
+
+## Portada elegida: original compacto
+
+Wilmer elige el original. El nombre pasa a la cabecera y las experiencias de Casamedia e IsardVDI comparten estructura, superficie y tecnologías en texto. El mosaico se compacta para escritorio; en ventanas anchas y bajas pasa a tres columnas. En móvil se conserva el scroll vertical. Se mantienen el flujo normal y la accesibilidad cuando una ventana o el zoom requieren más espacio.
+
+Ajustes en la rama `ajustes-original-escritorio`, basada en `prueba-hallmark`. Las tres propuestas posteriores siguen guardadas en `exploracion-custom-portadas`. Los tamaños comprobados y las decisiones se detallan en [decisiones-portfolio.md](decisiones-portfolio.md).

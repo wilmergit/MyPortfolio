@@ -1,15 +1,5 @@
-.intro { padding: 26px 0 28px; }
-.intro-label, .intro-baseline { display: flex; justify-content: space-between; gap: 20px; }
-.intro h1 { display: flex; align-items: center; gap: .16em; font: 700 clamp(64px, 10.4vw, 136px)/1.02 var(--display); letter-spacing: -.045em; color: var(--red); margin: 14px 0 18px; overflow-wrap: break-word; min-width: 0; }
-.name-star { font: 400 .62em/1 sans-serif; margin-left: auto; }
-.intro-baseline { align-items: end; }
-.intro-baseline p { margin: 0; font-size: clamp(18px, 2vw, 26px); letter-spacing: -.035em; }
-.intro-baseline p + p { font-size: 14px; line-height: 1.5; letter-spacing: 0; }
-@media (max-width: 600px) {
-  .intro { padding: 20px 0 24px; }
-  .intro-label span + span, .name-star { display: none; }
-  .intro h1 { display: block; font-size: clamp(64px, 19vw, 100px); margin: 12px 0; }
-  .intro h1 > span:first-child { display: block; }
-  .intro-baseline { display: block; }
-  .intro-baseline p + p { margin-top: 10px; }
-}
+.intro { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 16px 0; }
+.intro h1 { font: 600 clamp(24px, 2.5vw, 32px)/1.1 var(--display); margin: 0; min-width: 0; overflow-wrap: break-word; }
+.intro-location { font: 12px/1.5 var(--mono); margin: 6px 0 0; }
+.intro-motto { font-size: 14px; line-height: 1.5; margin: 0; max-width: 34ch; text-align: right; }
+@media (max-width: 600px) { .intro { display: block; padding: 20px 0; } .intro-motto { text-align: left; margin-top: 10px; } }

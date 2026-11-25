@@ -9,6 +9,18 @@ main:focus { outline: none; }
 p { line-height: 1.6; }
 ::selection { background: #282a2e; color: #fff; }
 .page-shell { max-width: 1320px; padding: 0 48px; margin: auto; }
+.home-shell { min-height: 100svh; display: flex; flex-direction: column; }
+.home-shell .footer { margin-top: auto; }
+@media (min-width: 1000px) {
+  .home-shell .hdr { padding-block: 8px; }
+  .home-shell .intro { padding-block: 8px; }
+  .home-shell .intro > div { display: flex; align-items: baseline; gap: 16px; }
+  .home-shell .intro h1 { font-size: 26px; }
+  .home-shell .intro-location { margin: 0; }
+  .home-shell .intro-motto { font-size: 13px; max-width: 34ch; }
+  .home-shell .footer { padding-block: 8px; }
+  .home-shell main { padding-bottom: 12px; }
+}
 .eyebrow { font: 12px/1.5 var(--mono); letter-spacing: 0; }
 .text-link { font-size: 13px; display: inline-block; }
 .skip-link { position: fixed; top: -100px; left: 20px; padding: 14px; z-index: 10; background: var(--ink); color: white; }

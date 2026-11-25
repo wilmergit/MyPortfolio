@@ -1,8 +1,14 @@
 .hdr { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; border-bottom: 1px solid var(--line); gap: 24px;
-  .wordmark { font-size: 32px; font-weight: 800; letter-spacing: -3px; text-decoration: none; }
+  .wordmark { font: 700 36px/1 var(--display); color: var(--red); letter-spacing: -.025em; text-decoration: none; }
   .wordmark span { font-size: 12px; vertical-align: top; letter-spacing: 0; margin-left: 5px; }
   nav { display: flex; gap: 28px; font-size: 14px; }
   nav a { text-decoration: none; }
 }
 .header-note { font: 12px var(--mono); letter-spacing: 0; }
 @media (max-width: 600px) { .header-note { display: none; } .hdr { padding: 18px 0; } }
+@media (max-width: 600px) {
+  .hdr { gap: 12px; }
+  .hdr .wordmark { font-size: 28px; white-space: nowrap; }
+  .hdr nav { font-size: 12px; gap: 14px; }
+  .hdr nav a { white-space: nowrap; }
+}
