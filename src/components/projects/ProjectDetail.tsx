@@ -3,7 +3,7 @@ import type { Project } from '../../data/projects';
 export default function ProjectDetail({ project, returnTo = '#/' }: { project: Project; returnTo?: string }) {
   return (
     <article className="project-detail">
-      <a className="text-link back-link" href={returnTo}>{returnTo === '#/custom' ? 'Volver al portfolio custom' : '← Todos los proyectos'}</a>
+      <a className="text-link back-link" href={returnTo}>{returnTo === '#/custom' ? 'Volver al portfolio custom' : returnTo.startsWith('#/explorar/') ? 'Volver a la propuesta' : '← Todos los proyectos'}</a>
       <div className="detail-heading"><div><p className="eyebrow">{project.category}</p><h1>{project.name}</h1></div><p>{project.summary}</p></div>
       <dl className="project-meta"><div><dt>APORTACIÓN</dt><dd>{project.role}</dd></div><div><dt>TECNOLOGÍAS</dt><dd>{project.technologies.join(' / ')}</dd></div><div><dt>CÓDIGO FUENTE</dt><dd><a href={project.repositoryUrl}>Ver en GitHub ↗</a></dd></div></dl>
       <figure className="detail-image"><img src={project.image.src} alt={project.image.alt} /><figcaption>Heaven / Vista de la portada del proyecto</figcaption></figure>

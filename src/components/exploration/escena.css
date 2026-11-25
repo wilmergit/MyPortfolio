@@ -1,0 +1,59 @@
+/* Hallmark · theme: custom · shape: object poster followed by project and work · genre: editorial · job: hire · idea: "Heaven is the tangible object that introduces Wilmer's interface work" · vibe: "exposición cálida, objeto central, letras geométricas" · hero: custom three-axis object poster · nav: reference links · footer: compact credits · paper: apricot · accent: wine ink · display: Tektur · body: Chivo · axes: mid/geometric-sans/warm · posture: Committed · surface: absolute · signature: real cartridge in a circular aperture · imagery: Heaven screenshot and crop · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: object and name competing; give each a distinct horizontal axis */
+/* Hallmark · waive 7b · real screenshot has absolute black background · Heaven keeps its original black inside the circular image aperture */
+/* Hallmark · waive 77 · biography is an oversized statement paired with its heading · Wilmer introduces the connection between interface design and development with his real words, without adding a filler image */
+@import url('./base.css');
+.exp-escena { --exp-ground: var(--exp-apricot); --exp-ink: var(--exp-wine); --exp-body: var(--exp-sans); --exp-display: var(--exp-geometric); }
+.exp-escena .exp-header .exp-wordmark { font-size: 20px; }
+.scene-hero { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.4fr) minmax(0, .65fr); align-items: center; gap: var(--exp-space-lg); padding-block: var(--exp-space-2xl); }
+.scene-hero h1 { font-size: clamp(56px, 6.3vw, 90px); line-height: 1.08; letter-spacing: -.04em; }
+.scene-object { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; width: 100%; margin: 0; background: var(--exp-black); color: var(--exp-white); border-radius: 50%; overflow: clip; }
+.scene-object svg { width: 70%; height: auto; aspect-ratio: 420 / 500; }
+.scene-intro > p { font-size: 20px; line-height: 1.4; max-width: 28ch; }
+.scene-intro .exp-primary { margin-top: var(--exp-space-lg); padding-inline: var(--exp-space-md); white-space: nowrap; }
+.scene-project { padding-top: var(--exp-space-2xl); padding-bottom: var(--exp-space-3xl); }
+.scene-project > h2 { font-size: clamp(88px, 15vw, 200px); line-height: 1.08; letter-spacing: -.04em; }
+.exp-escena .exp-project-meta { display: flex; justify-content: space-between; align-items: start; gap: var(--exp-space-xl); margin-block: var(--exp-space-xl); }
+.exp-escena .exp-project-meta > p { max-width: 30ch; font-size: 20px; }
+.exp-escena .exp-project-meta > a { max-width: 20ch; }
+.exp-escena .exp-screenshot { max-width: 1000px; margin-left: auto; }
+.exp-escena .exp-about { padding-block: var(--exp-space-2xl); border-top: 2px solid var(--exp-wine); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--exp-space-xl); }
+.exp-escena .exp-about h2 { font-size: clamp(40px, 4.5vw, 64px); line-height: 1.15; }
+.exp-escena .exp-about-copy > p { font-size: 32px; line-height: 1.5; }
+.exp-escena .exp-experience { padding-block: var(--exp-space-2xl); }
+.exp-escena .exp-experience > h2 { font-size: 40px; line-height: 1.2; margin-bottom: var(--exp-space-2xl); max-width: 20ch; }
+.exp-escena .exp-job { padding-block: var(--exp-space-xl); border-top: 2px solid var(--exp-wine); display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr); gap: var(--exp-space-lg); }
+.exp-escena .exp-job h3 { font-size: clamp(32px, 4vw, 56px); line-height: 1.2; }
+.exp-escena .exp-job-title > p { margin-top: var(--exp-space-md); }
+.exp-escena .exp-job-date { text-align: right; font-size: 14px; }
+.exp-escena .exp-job-description { grid-column: 1 / -1; margin-left: 32%; padding-top: var(--exp-space-lg); font-size: 20px; }
+.exp-escena .exp-contact { background: var(--exp-peach); color: var(--exp-wine); padding: var(--exp-space-2xl); margin-block: var(--exp-space-2xl); border-radius: 80px 0 80px 0; }
+.exp-escena .exp-contact h2 { font-size: clamp(44px, 6vw, 84px); line-height: 1.15; max-width: 18ch; }
+.exp-escena .exp-contact > a { font-size: 22px; margin-top: var(--exp-space-xl); }
+@media (max-width: 1000px) {
+ .scene-hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); }
+ .scene-intro { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: var(--exp-space-lg); }
+ .scene-intro > p { max-width: 28ch; }
+ .scene-intro .exp-primary { margin-top: 0; }
+ .exp-escena .exp-project-meta { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+ .scene-hero { padding-top: var(--exp-space-lg); gap: var(--exp-space-lg); }
+ .scene-hero h1 { font-size: clamp(38px, 8.7vw, 52px); }
+ .scene-intro { display: block; }
+ .scene-intro > p { font-size: 18px; }
+ .scene-intro .exp-primary { margin-top: var(--exp-space-lg); }
+ .scene-project > h2 { font-size: clamp(64px, 17vw, 100px); }
+ .exp-escena .exp-project-meta { display: block; margin-block: var(--exp-space-lg); }
+ .exp-escena .exp-project-meta dl { margin-block: var(--exp-space-lg); }
+ .exp-escena .exp-about { grid-template-columns: minmax(0, 1fr); }
+ .exp-escena .exp-about-copy > p { font-size: 18px; }
+ .exp-escena .exp-experience > h2 { font-size: 32px; }
+ .exp-escena .exp-job { grid-template-columns: minmax(0, 1fr); }
+ .exp-escena .exp-job h3 { font-size: 30px; }
+ .exp-escena .exp-job-date { text-align: left; }
+ .exp-escena .exp-job-description { margin-left: 0; font-size: 18px; }
+ .exp-escena .exp-contact { padding: var(--exp-space-xl) var(--exp-space-lg); border-radius: 40px 0 40px 0; }
+ .exp-escena .exp-contact h2 { font-size: 36px; }
+ .exp-escena .exp-contact > a { font-size: 18px; }
+}

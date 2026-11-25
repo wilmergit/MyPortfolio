@@ -1,0 +1,9 @@
+:root {
+ --exp-silver: oklch(94% .012 150); --exp-green: oklch(25% .045 155); --exp-sage: oklch(83% .035 150); --exp-rule-green: oklch(73% .025 150);
+ --exp-apricot: oklch(80% .125 50); --exp-wine: oklch(27% .09 5); --exp-peach: oklch(88% .075 50); --exp-wine-rule: oklch(55% .1 20);
+ --exp-ice: oklch(94% .025 230); --exp-plum: oklch(28% .06 325); --exp-ice-rule: oklch(77% .035 230); --exp-ice-deep: oklch(87% .035 230);
+ --exp-black: #000; --exp-white: oklch(97% .005 230);
+ --exp-mono: 'Spline Sans Mono', monospace; --exp-geometric: 'Tektur', sans-serif; --exp-serif: 'Alegreya', serif; --exp-sans: 'Chivo', sans-serif;
+ --exp-space-xs: 8px; --exp-space-sm: 12px; --exp-space-md: 16px; --exp-space-lg: 24px; --exp-space-xl: 40px; --exp-space-2xl: 64px; --exp-space-3xl: 96px; --exp-space-4xl: 144px;
+ --exp-cap: 1400px; --exp-gutter: 48px;
+}

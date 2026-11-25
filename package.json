@@ -12,7 +12,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "audit:visual": "node scripts/hallmark.mjs audit",
-    "capture:visual": "node scripts/hallmark.mjs capture"
+    "capture:visual": "node scripts/hallmark.mjs capture",
+    "capture:exploration": "node scripts/exploration-previews.mjs"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",

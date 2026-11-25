@@ -1,0 +1,59 @@
+/* Hallmark · theme: custom · shape: project catalogue with lateral identity · genre: editorial · job: hire · idea: "Know Wilmer by reading the actual work before his biography" · vibe: "archivo tranquilo, preciso, abierto al trabajo" · hero: custom lateral profile and project cover · nav: reference links · footer: compact credits · paper: silver green · accent: forest ink · display: Spline Sans Mono · body: Chivo · axes: light/mono/cool · posture: Committed · signature: Heaven as a catalogue entry · imagery: real Heaven screenshot · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: narrow side column; break the name at its natural boundary */
+/* Hallmark · waive 44c · custom lateral identity beside the complete project screenshot · Wilmer and Heaven share the first viewport as a catalogue, rather than a full-height introduction */
+/* Hallmark · waive 59 · compact catalogue divided by rules · Heaven metadata and the Casamedia records follow a continuous reading sequence rather than separate landing-page screens */
+/* Hallmark · waive 77 · real work records occupy the catalogue column · Casamedia and IsardVDI retain a readable measure aligned with Heaven, rather than stretching prose across the profile column */
+/* Hallmark · dismissed 77 · the nested catalogue includes profile, Heaven, experience, presentation and contact; the section counter excludes nested sections */
+@import url('./base.css');
+.exp-archivo { --exp-ground: var(--exp-silver); --exp-ink: var(--exp-green); --exp-body: var(--exp-sans); --exp-display: var(--exp-mono); }
+.exp-archivo .exp-header { border-bottom: 1px solid var(--exp-rule-green); }
+.archive-layout { display: grid; grid-template-columns: minmax(0, 26%) minmax(0, 1fr); gap: var(--exp-space-2xl); padding-top: var(--exp-space-xl); }
+.archive-identity { padding-block: var(--exp-space-xl); display: flex; flex-direction: column; align-items: start; }
+.archive-identity h1 { font-size: clamp(36px, 3.6vw, 52px); line-height: 1.1; letter-spacing: -.04em; }
+.archive-identity h1 span { display: block; }
+.archive-identity > p { margin-top: var(--exp-space-lg); max-width: 28ch; }
+.archive-identity .exp-primary { margin-top: auto; }
+.archive-project-name { display: flex; justify-content: space-between; align-items: end; gap: var(--exp-space-lg); margin-bottom: var(--exp-space-lg); }
+.archive-project-name h2 { font-size: clamp(48px, 5vw, 72px); line-height: 1.1; letter-spacing: -.04em; }
+.archive-project-name > span { font-size: 13px; }
+.exp-archivo .exp-project-meta { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--exp-space-lg); padding-top: var(--exp-space-lg); }
+.exp-archivo .exp-project-meta > a { grid-column: 1 / -1; font-size: 14px; }
+.archive-follow { margin-left: calc(26% + var(--exp-space-2xl)); }
+.archive-notes { padding-bottom: var(--exp-space-2xl); }
+.exp-archivo .exp-experience { padding-block: var(--exp-space-2xl); border-top: 1px solid var(--exp-rule-green); }
+.exp-archivo .exp-experience > h2 { font-size: 40px; line-height: 1.25; margin-bottom: var(--exp-space-xl); }
+.exp-archivo .exp-job { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--exp-space-lg); padding-block: var(--exp-space-xl); border-top: 1px solid var(--exp-rule-green); }
+.exp-archivo .exp-job h3 { font-size: 24px; line-height: 1.3; }
+.exp-archivo .exp-job-title > p { margin-top: var(--exp-space-xs); }
+.exp-archivo .exp-job-date { font-size: 14px; text-align: right; }
+.exp-archivo .exp-job-description { grid-column: 1 / -1; }
+.exp-archivo .exp-about { padding-block: var(--exp-space-2xl); }
+.exp-archivo .exp-about h2 { font-size: 40px; line-height: 1.2; margin-bottom: var(--exp-space-lg); }
+.exp-archivo .exp-about-copy > p { font-size: 20px; }
+.exp-archivo .exp-contact { padding: var(--exp-space-xl); background: var(--exp-sage); color: var(--exp-green); margin-bottom: var(--exp-space-2xl); }
+.exp-archivo .exp-contact h2 { font-size: 40px; line-height: 1.2; max-width: 16ch; margin-bottom: var(--exp-space-lg); }
+.exp-archivo .exp-footer { border-top: 1px solid var(--exp-rule-green); }
+@media (max-width: 800px) {
+ .archive-layout { gap: var(--exp-space-xl); grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+ .archive-project-name { display: block; }
+ .archive-project-name > span { display: block; margin-top: var(--exp-space-xs); }
+ .exp-archivo .exp-project-meta { grid-template-columns: minmax(0, 1fr); }
+ .exp-archivo .exp-project-meta > a { grid-column: auto; }
+ .archive-follow { margin-left: 0; }
+}
+@media (max-width: 540px) {
+ .archive-layout { grid-template-columns: minmax(0, 1fr); gap: var(--exp-space-xl); padding-top: var(--exp-space-lg); }
+ .archive-identity { padding-block: 0; display: block; }
+ .archive-identity h1 { font-size: 36px; }
+ .archive-identity h1 span { display: inline; }
+ .archive-identity > p { max-width: 28ch; margin-top: var(--exp-space-md); }
+ .archive-identity .exp-primary { margin-top: var(--exp-space-lg); }
+ .archive-project-name { display: flex; align-items: center; }
+ .archive-project-name h2 { font-size: 42px; }
+ .archive-project-name > span { max-width: 10ch; }
+ .exp-archivo .exp-job { grid-template-columns: minmax(0, 1fr); }
+ .exp-archivo .exp-job-date { text-align: left; }
+ .exp-archivo .exp-about h2 { font-size: 32px; }
+ .exp-archivo .exp-contact { padding: var(--exp-space-lg); }
+ .exp-archivo .exp-contact h2 { font-size: 28px; }
+}

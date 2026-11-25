@@ -1,0 +1,37 @@
+/* Hallmark · shared scoped base for the three custom proposals */
+@import url('./tokens.css');
+html, body { overflow-x: clip; }
+.exploration { color: var(--exp-ink); background: var(--exp-ground); font: 400 16px/1.6 var(--exp-body); min-height: 100dvh; font-synthesis: none; }
+.exp-container { max-width: var(--exp-cap); margin-inline: auto; padding-inline: var(--exp-gutter); }
+.exploration h1, .exploration h2, .exploration h3 { font-family: var(--exp-display); font-weight: 600; overflow-wrap: break-word; min-width: 0; text-wrap: balance; margin: 0; }
+.exploration p { margin: 0; text-wrap: pretty; }
+.exploration a { color: inherit; text-underline-offset: 5px; }
+.exploration a:focus-visible, .exploration button:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+.exploration a:hover { text-decoration-thickness: 2px; }
+.exploration a:active { opacity: .75; }
+.exploration main:focus { outline: none; }
+.exp-comparison-nav { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--exp-space-md); padding: var(--exp-space-sm) var(--exp-space-lg); font: 400 13px/1.5 var(--exp-sans); background: var(--exp-green); color: var(--exp-silver); }
+.exp-comparison-nav [aria-current] { text-decoration-thickness: 3px; }
+.exp-header { display: flex; justify-content: space-between; align-items: center; gap: var(--exp-space-lg); padding-block: var(--exp-space-lg); }
+.exp-header > div { display: flex; gap: var(--exp-space-lg); }
+.exp-header a { text-decoration: none; font-size: 14px; }
+.exp-wordmark { font-family: var(--exp-display); font-weight: 600; }
+.exp-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: var(--exp-space-sm) var(--exp-space-lg); background: var(--exp-ink); color: var(--exp-ground) !important; text-decoration: none; }
+.exp-primary:hover { text-decoration: underline; }
+.exploration .exp-primary:focus-visible, .exploration .exp-skip:focus-visible { outline-color: var(--exp-ink); }
+.exp-screenshot { margin: 0; }
+.exp-screenshot img { width: 100%; height: auto; display: block; }
+.exp-project-meta dl { display: flex; flex-wrap: wrap; gap: var(--exp-space-lg); margin: 0; }
+.exp-project-meta dt { font-size: 13px; }
+.exp-project-meta dd { margin: 0; }
+.exp-project-meta a { display: inline-block; }
+.exp-about p { max-width: 55ch; }
+.exp-about a { display: inline-block; margin-top: var(--exp-space-lg); }
+.exp-job-description { max-width: 60ch; }
+.exp-contact a { display: inline-block; }
+.exp-footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--exp-space-md); padding-block: var(--exp-space-lg); font-size: 13px; }
+.exp-skip { position: fixed; left: 16px; top: -100px; z-index: 500; background: var(--exp-ink); color: var(--exp-ground) !important; padding: var(--exp-space-md); }
+.exp-skip:focus { top: 16px; }
+@media (max-width: 800px) { .exploration { --exp-gutter: 24px; } }
+@media (max-width: 540px) { .exploration { --exp-gutter: 20px; } .exp-header > div { gap: var(--exp-space-md); } }
+@media (prefers-reduced-motion: reduce) { .exploration *, .exploration *::before, .exploration *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

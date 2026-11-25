@@ -1,0 +1,21 @@
+/* Hallmark · comparison utility for custom prototype selection; existing portfolio preserved */
+@import url('./tokens.css');
+.exploration-comparison { max-width: 1400px; padding: var(--exp-space-xl) var(--exp-space-xl); margin-inline: auto; font-family: var(--exp-sans); color: var(--exp-green); }
+.exploration-comparison > header { display: flex; justify-content: space-between; gap: var(--exp-space-lg); font-size: 14px; }
+.exploration-comparison > h1 { font-size: clamp(36px, 5vw, 64px); line-height: 1.1; letter-spacing: -.04em; max-width: 18ch; margin-block: var(--exp-space-2xl) var(--exp-space-lg); overflow-wrap: break-word; min-width: 0; }
+.exploration-comparison > p { max-width: 65ch; }
+.comparison-controls { display: flex; gap: var(--exp-space-sm); padding-block: var(--exp-space-lg); }
+.comparison-controls button { border: 1px solid var(--exp-green); background: var(--exp-silver); color: var(--exp-green); font: 400 16px var(--exp-sans); padding: var(--exp-space-sm) var(--exp-space-lg); min-height: 48px; cursor: pointer; }
+.comparison-controls button[aria-pressed='true'] { background: var(--exp-green); color: var(--exp-silver); }
+.comparison-controls button:hover { text-decoration: underline; }
+.exploration-comparison button:focus-visible, .exploration-comparison a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
+.comparison-options { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--exp-space-2xl) var(--exp-space-xl); padding-bottom: var(--exp-space-2xl); }
+.comparison-image { display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 1.6; background: var(--exp-sage); }
+.comparison-image img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.comparison-image-phone { aspect-ratio: 1; }
+.comparison-option-heading { display: flex; justify-content: space-between; align-items: baseline; gap: var(--exp-space-lg); }
+.comparison-option-heading h2 { font-size: 24px; margin-block: var(--exp-space-lg) var(--exp-space-sm); }
+.comparison-option-heading a { font-size: 14px; }
+.comparison-options article > p { margin: 0; max-width: 55ch; }
+.exploration-comparison footer { border-top: 1px solid var(--exp-rule-green); padding-block: var(--exp-space-lg); font-size: 14px; }
+@media (max-width: 650px) { .exploration-comparison { padding: var(--exp-space-lg) var(--exp-space-lg); } .comparison-options { grid-template-columns: minmax(0, 1fr); } .exploration-comparison > header { flex-wrap: wrap; } }

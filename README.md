@@ -73,3 +73,26 @@ npm.cmd run audit:visual
 ```
 
 El comando general de auditoría incluye también archivos originales; no equivale al resultado focalizado del custom documentado en [decisiones-portfolio.md](decisiones-portfolio.md).
+
+## Exploración independiente de portadas
+
+La rama `exploracion-custom-portadas` añade tres prototipos de comparación. No selecciona ni integra una propuesta como portada y no cambia las decisiones visuales de [decisiones-portfolio.md](decisiones-portfolio.md).
+
+- Comparador con capturas de escritorio y móvil: `/MyPortfolio/#/explorar`.
+- Archivo: `/MyPortfolio/#/explorar/archivo`.
+- Escena: `/MyPortfolio/#/explorar/escena`.
+- Carta: `/MyPortfolio/#/explorar/carta`.
+- Rediseño anterior conservado: `/MyPortfolio/#/custom`.
+- Original conservado: `/MyPortfolio/`.
+
+Las tres propuestas usan los mismos datos de Heaven en [projects.ts](src/data/projects.ts) y los mismos textos de perfil y experiencia en [content.ts](src/components/exploration/content.ts). La ficha de Heaven conserva el origen mediante el parámetro `desde`, de modo que su enlace de vuelta regresa a la propuesta correspondiente. Las fuentes y licencias se alojan en [public/fonts/exploration](public/fonts/exploration).
+
+Para regenerar las ocho capturas del comparador, con `npm run preview` iniciado en otra terminal:
+
+```sh
+npm run build
+npm run capture:exploration
+npm run build
+```
+
+El generador acepta `CHROME_PATH` para elegir Chromium y `EXPLORATION_URL` para cambiar la URL local. Las capturas publicables se guardan en [public/exploration-previews](public/exploration-previews); las capturas completas de revisión van a `.hallmark/exploration`, excluida de Git.

@@ -1,0 +1,51 @@
+/* Hallmark · theme: custom · shape: personal letter with a project plate · genre: editorial · job: hire · idea: "Meet Wilmer through a considered reading sequence before opening his work" · vibe: "carta serena, azul hielo, lectura cercana" · hero: custom short personal opening · nav: reference links · footer: compact credits · paper: ice blue · accent: plum ink · display: Alegreya · body: Chivo · axes: light/roman-serif/cool · posture: Committed · signature: a spacious personal opening followed by the real Heaven screen · imagery: Heaven screenshot · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: prose becoming generic; retain actual names, tools and project screenshot */
+/* Hallmark · waive 44c · custom letter opening inside the first viewport · Wilmer introduces himself before the Heaven plate, with the project action visible immediately */
+/* Hallmark · waive 77 · narrow reading measure with actual project and employment records · Wilmer, Casamedia and IsardVDI form a personal letter; the text keeps a comfortable measure rather than becoming a wide promotional canvas */
+@import url('./base.css');
+.exp-carta { --exp-ground: var(--exp-ice); --exp-ink: var(--exp-plum); --exp-body: var(--exp-sans); --exp-display: var(--exp-serif); }
+.exp-carta .exp-container { --exp-cap: 1280px; }
+.exp-carta .exp-header { border-bottom: 1px solid var(--exp-ice-rule); }
+.exp-carta .exp-header .exp-wordmark { font-size: 24px; }
+.letter-hero { max-width: 780px; margin-inline: auto; padding-top: var(--exp-space-3xl); padding-bottom: var(--exp-space-2xl); }
+.letter-hero h1 { font-size: clamp(80px, 11vw, 156px); font-weight: 500; line-height: 1.04; letter-spacing: -.04em; }
+.letter-hero > p { font-size: 24px; max-width: 30ch; margin-top: var(--exp-space-lg); }
+.letter-hero .exp-primary { margin-top: var(--exp-space-xl); border-radius: 999px; }
+.exp-carta .exp-about { max-width: 780px; margin-inline: auto; padding-top: var(--exp-space-2xl); padding-bottom: var(--exp-space-4xl); }
+.exp-carta .exp-about h2 { font-size: 52px; line-height: 1.15; margin-bottom: var(--exp-space-lg); }
+.exp-carta .exp-about-copy > p { font-size: 32px; line-height: 1.6; }
+.letter-project { padding-bottom: var(--exp-space-3xl); }
+.letter-project-heading { display: flex; justify-content: space-between; align-items: baseline; gap: var(--exp-space-lg); margin-bottom: var(--exp-space-xl); }
+.letter-project-heading h2 { font-size: clamp(72px, 10vw, 144px); font-weight: 500; line-height: 1.08; letter-spacing: -.03em; }
+.exp-carta .exp-project-meta { max-width: 780px; margin-inline: auto; padding-top: var(--exp-space-xl); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--exp-space-lg); }
+.exp-carta .exp-project-meta > p { grid-column: 1 / -1; font-size: 24px; }
+.exp-carta .exp-project-meta > a { align-self: end; text-align: right; }
+.exp-carta .exp-experience { max-width: 780px; margin-inline: auto; padding-block: var(--exp-space-2xl); }
+.exp-carta .exp-experience > h2 { font-size: 56px; line-height: 1.15; margin-bottom: var(--exp-space-2xl); }
+.exp-carta .exp-job { padding-top: var(--exp-space-xl); padding-bottom: var(--exp-space-2xl); border-top: 1px solid var(--exp-ice-rule); }
+.exp-carta .exp-job h3 { font-size: 56px; font-weight: 500; line-height: 1.15; }
+.exp-carta .exp-job-title > p { margin-top: var(--exp-space-xs); }
+.exp-carta .exp-job-date { display: flex; flex-wrap: wrap; gap: var(--exp-space-lg); margin-top: var(--exp-space-md); font-size: 14px; }
+.exp-carta .exp-job-description { padding-top: var(--exp-space-lg); font-size: 32px; }
+.exp-carta .exp-contact { max-width: 780px; margin-inline: auto; padding-top: var(--exp-space-xl); padding-bottom: var(--exp-space-3xl); }
+.exp-carta .exp-contact h2 { font-size: clamp(52px, 7vw, 92px); font-weight: 500; line-height: 1.1; max-width: 16ch; }
+.exp-carta .exp-contact a { font-size: 22px; margin-top: var(--exp-space-xl); }
+.exp-carta .exp-footer { border-top: 1px solid var(--exp-ice-rule); }
+@media (max-width: 600px) {
+ .letter-hero { padding-top: var(--exp-space-xl); padding-bottom: var(--exp-space-xl); }
+ .letter-hero h1 { font-size: clamp(68px, 18vw, 108px); }
+ .letter-hero > p { font-size: 20px; }
+ .exp-carta .exp-about { padding-top: var(--exp-space-xl); padding-bottom: var(--exp-space-2xl); }
+ .exp-carta .exp-about h2 { font-size: 40px; }
+ .exp-carta .exp-about-copy > p { font-size: 20px; }
+ .letter-project-heading { flex-wrap: wrap; margin-bottom: var(--exp-space-lg); }
+ .letter-project-heading h2 { font-size: 64px; }
+ .letter-project-heading > a { font-size: 14px; white-space: nowrap; }
+ .exp-carta .exp-project-meta { grid-template-columns: minmax(0, 1fr); }
+ .exp-carta .exp-project-meta > p { font-size: 20px; }
+ .exp-carta .exp-project-meta > a { text-align: left; }
+ .exp-carta .exp-experience > h2 { font-size: 44px; }
+ .exp-carta .exp-job h3 { font-size: 44px; }
+ .exp-carta .exp-job-description { font-size: 20px; }
+ .exp-carta .exp-contact h2 { font-size: 52px; }
+}
