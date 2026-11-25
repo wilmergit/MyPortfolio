@@ -3,13 +3,13 @@ import './experience.scss';
 const experiences = [
   {
     id: 'casamedia', name: 'Casamedia', role: 'Desarrollo Full Stack / Erasmus',
-    period: 'Marzo a julio de 2025', shortPeriod: 'Mar–jul 2025',
+    period: 'Marzo a julio de 2025', shortPeriod: 'Mar a jul 2025',
     description: 'Componentes visuales, rutas, controladores y modelos para aplicaciones con Flutter, Node y MongoDB.',
     technologies: ['Flutter', 'Node', 'MongoDB'],
   },
   {
     id: 'isard', name: 'IsardVDI × ITB', role: 'Desarrollo frontend',
-    period: 'Noviembre de 2024 a marzo de 2025', shortPeriod: 'Nov 2024–mar 2025',
+    period: 'Noviembre de 2024 a marzo de 2025', shortPeriod: 'Nov 2024 a mar 2025',
     description: 'Desarrollo de componentes frontend con Vue, Storybook y Tailwind CSS.',
     technologies: ['Vue', 'Storybook', 'Tailwind CSS'],
   },

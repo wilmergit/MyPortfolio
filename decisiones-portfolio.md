@@ -185,6 +185,17 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **Verificación.** TypeScript/Vite y ESLint correctos. Portada completa, incluido el pie, comprobada sin scroll vertical en 1024×768, 1280×600, 1280×720, 1366×768, 1440×900 y 1920×1080. Comprobados 320, 390 y 834 px sin desbordamiento horizontal; teclado, salto al contenido, ficha de Heaven, recarga y vuelta correctos. El diseño conserva el flujo normal: ante ventanas excepcionalmente pequeñas, zoom o texto ampliado, permite scroll en lugar de recortar el contenido.
 - **Rama.** Ajustes guardados en ajustes-original-escritorio, creada desde prueba-hallmark para conservar las exploraciones aparte.
 
+## Auditoría Hallmark del original elegido — 25 de noviembre de 2026
+
+- **Alcance.** Pulido del diseño original, con el mosaico y la condición de escritorio sin scroll conservados. Se comprueban portada y ficha de Heaven, no la propuesta custom archivada.
+- **Correcciones visuales.** La categoría de Heaven pasa debajo de su título y usa mayúsculas normales. Se retiran las etiquetas redundantes de presentación y contacto, el símbolo decorativo del contacto y las flechas añadidas al texto de los enlaces. El encabezado figurativo «Curiosidad como punto de partida.» se sustituye por «Sobre mí.», que comunica directamente la función del bloque. «Conectemos» se elimina porque la pregunta de contacto ya expresa la acción. Los datos de proyectos, experiencia y enlaces se conservan.
+- **Imagen.** El fondo del recorte de Heaven pasa a negro para coincidir con el archivo real y eliminar el rectángulo visible alrededor del cartucho. Es la única excepción de color absoluto registrada. La imagen de su ficha declara las dimensiones del objeto tipado para reservar su espacio antes de cargar.
+- **Lectura.** Las etiquetas de tecnologías, el pie y los metadatos usan la fuente de lectura. Las fechas siguen siendo breves, con el periodo completo disponible. La ficha cambia las etiquetas en mayúsculas a texto normal y sus títulos a «La idea», «Mi aportación» y «El alcance», eliminando rótulos repetidos.
+- **Foco y estilos.** Colores y fuentes pasan por tokens; se añade un token de foco rojo oscuro, contraste de selección y estilo activo de enlaces. Los encabezados equilibran las líneas y la cuadrícula de la ficha usa pistas que pueden encogerse.
+- **Herramienta corregida.** El auditor anterior ignoraba SCSS y generaba falsos fallos de foco y desbordamiento. [scripts/hallmark.mjs](scripts/hallmark.mjs) compila los estilos Sass del original, toma un snapshot del DOM real y proporciona ambos a Hallmark. La revisión visual usa la URL real; no renderiza una copia file:// con rutas Vite rotas. Snapshot, CSS e imágenes temporales se guardan en .hallmark, excluida de Git.
+- **Resultado.** Portada y ficha: 0 FAIL y 0 WARN en el alcance de pulido. Una excepción documentada por el negro de la captura. Las observaciones de densidad, composición y escala se conservan como NOTE por la restricción de mantener el diseño y reunir el contenido en una pantalla; no se declara una aprobación de rediseño completo. La revisión visual se realiza en este hilo, sin revisor independiente.
+- **Verificación funcional.** Build, ESLint y chequeo del diff correctos. Se mantiene la portada sin scroll en los seis tamaños de escritorio acordados; tres tamaños móvil/tablet sin desbordamiento. Probados teclado, salto al contenido, Heaven, recarga y vuelta. No se incorporan métricas, testimonios ni imágenes nuevas.
+
 ## Historial
 
 - **24 de noviembre de 2026.** Wilmer eligió Heaven como proyecto destacado y confirmó su preferencia por una portada clara. Se registraron la paleta inicial, las propuestas de tipografía y composición y la forma de trabajo.
@@ -203,3 +214,5 @@ Este archivo reúne las decisiones de diseño, contenido y desarrollo. Al cambia
 - **24 de noviembre de 2026.** Wilmer descarta las alternativas, conserva el original y solicita Hallmark custom sin mosaicos. Se crea una propuesta vertical independiente, se retiran los diseños descartados y se conserva la navegación tipada de Heaven.
 
 - **25 de noviembre de 2026.** Wilmer elige el original. Se compacta su portada para escritorio, se lleva el nombre a la cabecera y se unifican las dos experiencias con tecnologías escritas. Las exploraciones permanecen en su rama independiente.
+
+- **25 de noviembre de 2026.** Nueva auditoría Hallmark y correcciones de pulido del original: etiquetas, tipografía secundaria, foco, encuadre de Heaven y ficha. Auditor Sass corregido; se mantienen el diseño elegido y la condición de escritorio sin scroll.

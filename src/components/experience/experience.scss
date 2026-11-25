@@ -5,6 +5,6 @@
 .experience-role { color: var(--role-on-dark); font-size: 14px; line-height: 1.5; margin: 8px 0 0; }
 .experience-description { color: var(--muted-on-dark); font-size: 14px; line-height: 1.5; margin: 10px 0 14px; }
 .tech-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
-.tech-tags span { padding: 4px 7px; border: 1px solid var(--border-on-dark); border-radius: 4px; font: 12px/1.4 var(--mono); }
+.tech-tags span { padding: 4px 7px; border: 1px solid var(--border-on-dark); border-radius: 4px; font: 12px/1.4 var(--body); }
 @media (max-width: 1100px) { .experience-heading { display: block; } .experience-period { text-align: left; max-width: none; margin-top: 6px; } }
 @media (max-width: 640px) { .experience-heading h2 { font-size: 32px; } .experience-description { font-size: 15px; line-height: 1.6; } .experience-role { font-size: 16px; } }

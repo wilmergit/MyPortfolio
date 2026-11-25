@@ -36,10 +36,10 @@ export default function App() {
       <Header />
       <main id="contenido" ref={main} tabIndex={-1}>
         {isHome ? <><Intro /><Body /></> : project ? <ProjectDetail project={project} returnTo={fromCustom ? '#/custom' : '#/'} /> : (
-          <section className="not-found"><p className="eyebrow">404 / Fuera del mapa</p><h1>Esta página no existe.</h1><a href="#/">Volver a la portada ↗</a></section>
+          <section className="not-found"><h1>Página no encontrada (404).</h1><a href="#/">Volver a la portada</a></section>
         )}
       </main>
-      <footer className="footer"><span>© {new Date().getFullYear()} Wilmer Zeas Rodriguez</span><span>Diseñado con intención. Construido con React.</span>{!isHome && <a href="#/custom">Ver propuesta custom</a>}<a href="https://github.com/wilmergit">GitHub ↗</a></footer>
+      <footer className="footer"><span>© {new Date().getFullYear()} Wilmer Zeas Rodriguez</span><span>Diseñado con intención. Construido con React.</span>{!isHome && <a href="#/custom">Ver propuesta custom</a>}<a href="https://github.com/wilmergit">GitHub</a></footer>
     </div>
   );
 }

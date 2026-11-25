@@ -4,7 +4,7 @@
   nav { display: flex; gap: 28px; font-size: 14px; }
   nav a { text-decoration: none; }
 }
-.header-note { font: 12px var(--mono); letter-spacing: 0; }
+.header-note { font: 12px var(--body); letter-spacing: 0; }
 @media (max-width: 600px) { .header-note { display: none; } .hdr { padding: 18px 0; } }
 @media (max-width: 600px) {
   .hdr { gap: 12px; }

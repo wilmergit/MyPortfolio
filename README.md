@@ -79,3 +79,9 @@ El comando general de auditoría incluye también archivos originales; no equiva
 Wilmer elige el original. El nombre pasa a la cabecera y las experiencias de Casamedia e IsardVDI comparten estructura, superficie y tecnologías en texto. El mosaico se compacta para escritorio; en ventanas anchas y bajas pasa a tres columnas. En móvil se conserva el scroll vertical. Se mantienen el flujo normal y la accesibilidad cuando una ventana o el zoom requieren más espacio.
 
 Ajustes en la rama `ajustes-original-escritorio`, basada en `prueba-hallmark`. Las tres propuestas posteriores siguen guardadas en `exploracion-custom-portadas`. Los tamaños comprobados y las decisiones se detallan en [decisiones-portfolio.md](decisiones-portfolio.md).
+
+## Auditoría del original con Sass
+
+El lanzador de [Hallmark](scripts/hallmark.mjs) compila los estilos SCSS del original y toma el DOM de la URL indicada. Así comprueba las reglas de foco y desbordamiento con el CSS real, en vez de tratar los archivos Sass como estilos ausentes. La auditoría visual cubre la portada o la ficha indicada mediante `PORTFOLIO_AUDIT_URL`; no incluye las propuestas archivadas. Los snapshots y capturas se excluyen de Git.
+
+`npm run audit:visual -- --before` permite registrar un estado inicial. El resultado se interpreta como pulido: conserva notas sobre composición y densidad que responden a la portada compacta elegida, sin presentarlo como aprobación de un rediseño completo.
